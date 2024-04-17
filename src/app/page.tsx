@@ -4,6 +4,7 @@ import MapSection from "./components/map-section";
 import NavBar from "./components/nav-bar";
 import PdfDonwloadSection from "./components/pdf-download-section";
 import PhotoGallery from "./components/photo-gallery";
+import ReviewsSection from "./components/reviews-section";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <IconsSection />
         <PdfDonwloadSection />
         <MapSection />
+        <ReviewsSection />
       </section>
     </main>
   );
