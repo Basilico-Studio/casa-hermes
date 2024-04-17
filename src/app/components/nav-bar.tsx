@@ -6,6 +6,7 @@ import { bubble as Menu } from "react-burger-menu";
 const NavBar = () => {
   return (
     <>
+      {/* DESKTOP MENU */}
       <div className="hidden md:flex justify-around items-center px-20 gap-10 border-b border-slate-500">
         <img className="size-24" src="/images/umbrella-3d.png" alt="logo" />
         <a href="">
@@ -25,6 +26,7 @@ const NavBar = () => {
         </a>
         <Button className="bg-teal-900 text-white">prenota</Button>
       </div>
+      {/* MOBILE BURGER MENU */}
       <Menu className="z-50 md:hidden">
         <a className="meu-item" href="">
           <p>Dove siamo</p>

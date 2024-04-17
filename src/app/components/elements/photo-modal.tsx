@@ -1,3 +1,4 @@
+import { CaretLeft, CaretRight, X } from "@phosphor-icons/react";
 import React, { useState } from "react";
 
 interface PhotoModalProps {
@@ -25,17 +26,17 @@ const PhotoModal = ({ onClose, photos, index }: PhotoModalProps) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
-      <div className="w-4/5 h-[90%] flex flex-col aspect-video">
-        <button className="text-primary text-lg place-self-end pr-2" onClick={() => onClose()}>
-          X
-        </button>
+      <div className="w-4/5 h-[50%] flex flex-col">
         <div className="overflow-hidden aspect-square h-full flex flex-col rounded">
-          <div className="absolute top-[50%] left-5" onClick={prevSlide}>
-            <p>ICON</p>
-          </div>
-          <div className="absolute top-[50%] right-5" onClick={nextSlide}>
-            <p>ICON</p>
-          </div>
+          <button className="absolute top-[50%] left-5" onClick={prevSlide}>
+            <CaretLeft className="text-black rounded-full p-1 bg-white" size={32} />
+          </button>
+          <button className="absolute top-[50%] right-5" onClick={nextSlide}>
+            <CaretRight className="text-black rounded-full p-1 bg-white" size={32} />
+          </button>
+          <button className="text-primary text-lg absolute top-[25%] right-5 pr-2" onClick={() => onClose()}>
+            <X className="text-white rounded-full p-1 bg-red-400" size={32} />
+          </button>
           <div className="h-[600px] bg-contain bg-no-repeat bg-center" style={{ backgroundImage: `url(${photos[currentIndex]})` }} />
         </div>
       </div>

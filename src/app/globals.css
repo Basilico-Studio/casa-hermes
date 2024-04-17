@@ -16,6 +16,10 @@
   top: 36px;
 }
 
+.bm-burger-button {
+  @apply md:hidden block;
+}
+
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: white;
@@ -73,4 +77,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+/* SWIPER STYLES */
+
+.swiper-button-next {
+  color: white !important;
+}
+
+.swiper-button-prev {
+  color: white !important;
 }
