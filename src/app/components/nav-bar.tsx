@@ -43,6 +43,9 @@ const NavBar = () => {
         <a className="meu-item" href="">
           <p>Contatti</p>
         </a>
+        <a className="meu-item" href="">
+          <p>Prenota</p>
+        </a>
       </Menu>
     </>
   );
