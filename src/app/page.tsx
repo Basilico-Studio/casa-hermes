@@ -1,3 +1,4 @@
+import ContactForm from "./components/contact-form";
 import HeroMain from "./components/hero-main";
 import IconsSection from "./components/icons-section";
 import MapSection from "./components/map-section";
@@ -17,6 +18,7 @@ export default function Home() {
         <PdfDonwloadSection />
         <MapSection />
         <ReviewsSection />
+        <ContactForm />
       </section>
     </main>
   );
