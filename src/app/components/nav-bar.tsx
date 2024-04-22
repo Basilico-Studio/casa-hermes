@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Button } from "./elements/button";
-import { bubble as Menu } from "react-burger-menu";
+import { stack as Menu } from "react-burger-menu";
 
 const NavBar = () => {
   return (
@@ -28,22 +28,22 @@ const NavBar = () => {
       </div>
       {/* MOBILE BURGER MENU */}
       <Menu className="z-50 md:hidden">
-        <a className="meu-item" href="">
+        <a href="">
           <p>Dove siamo</p>
         </a>
-        <a className="meu-item" href="">
+        <a href="">
           <p>Dove siamo</p>
         </a>
-        <a className="meu-item" href="">
+        <a href="">
           <p>Dove siamo</p>
         </a>
-        <a className="meu-item" href="">
+        <a href="">
           <p>Dicono di noi</p>
         </a>
-        <a className="meu-item" href="">
+        <a href="">
           <p>Contatti</p>
         </a>
-        <a className="meu-item" href="">
+        <a href="">
           <p>Prenota</p>
         </a>
       </Menu>
