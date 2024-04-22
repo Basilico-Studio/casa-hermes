@@ -25,7 +25,7 @@ const ContactForm = () => {
         <DateInput name="checkin" label="Check In" />
         <DateInput name="checkout" label="Check Out" />
       </div>
-      <Button className="bg-teal-900 text-white w-1/5 mt-5">Invia Richiesta</Button>
+      <Button className="bg-teal-900 text-white w-full md:w-1/5 mt-5">Invia Richiesta</Button>
     </Form>
   );
 };
