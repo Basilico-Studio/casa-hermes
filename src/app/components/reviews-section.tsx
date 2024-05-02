@@ -3,7 +3,7 @@ import ReviewSwiper from "./elements/review-swiper";
 
 const ReviewsSection = () => {
   return (
-    <div className="py-10">
+    <div id="reviews" className="py-10">
       <ReviewSwiper />
     </div>
   );

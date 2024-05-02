@@ -2,7 +2,7 @@ import React from "react";
 
 const MapSection = () => {
   return (
-    <div className="py-10 md:py-20 flex flex-col md:flex-row justify-between gap-10">
+    <div id="doveSiamo" className="py-10 md:py-20 flex flex-col md:flex-row justify-between gap-10">
       <div className="flex flex-col flex-1 justify-center">
         <h2 className="text-2xl md:text-4xl font-semibold mb-10">Dove siamo</h2>
         <p className="text-lg md:text-2xl leading-relaxed">
