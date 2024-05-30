@@ -24,7 +24,7 @@ const NavBar = () => {
         <a href="#form">
           <p className="hover:-translate-y-1 transition-all duration-300">Contatti</p>
         </a>
-        <Button className="bg-teal-900 text-white">prenota</Button>
+        <Button className="bg-teal-900 text-white text-sm">prenota</Button>
       </div>
       {/* MOBILE BURGER MENU */}
       <Menu className="z-50 md:hidden">

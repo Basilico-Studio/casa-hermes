@@ -16,15 +16,17 @@ const ContactForm = () => {
   };
 
   return (
-    <div id="form" className="flex justify-center">
+    <div id="form" className="flex justify-center pt-20">
       <Form onSubmit={onSubmit} {...form} className="py-10 md:w-1/2 flex flex-col items-center gap-3">
-        <h2 className="font-semibold text-3xl pb-10">Richiedi Disponibilità</h2>
+        <h2 className="font-semibold text-xl pb-10 uppercase">Richiedi Disponibilità</h2>
         <TextInput name="nomeCognome" label="Nome e Cognome" />
         <TextInput name="email" label="EMail" />
-        <TextInput name="telefono" label="Telefono" />
-        <div className="flex gap-10">
-          <DateInput name="checkin" label="Check In" />
-          <DateInput name="checkout" label="Check Out" />
+        <div className="flex gap-3 w-full">
+          <TextInput name="telefono" label="Telefono" />
+          <div className="flex gap-3">
+            <DateInput name="checkin" label="Check In" />
+            <DateInput name="checkout" label="Check Out" />
+          </div>
         </div>
         <Button className="bg-teal-900 text-white w-full md:w-2/5 mt-5">Invia Richiesta</Button>
       </Form>

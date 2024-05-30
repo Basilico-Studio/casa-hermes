@@ -43,7 +43,7 @@ const PhotoSwiper = ({ photos }: PhotoSwiperProps) => {
           {photos.map((picture, index) => {
             return (
               <SwiperSlide className="py-2">
-                <div className="rounded overflow-hidden bg-gray-400 aspect-square w-full h-full hover:-translate-y-1 transition-all duration-300">
+                <div className="rounded overflow-hidden bg-gray-400 w-full h-[300px] hover:-translate-y-1 transition-all duration-300">
                   <img key={index} src={picture} alt="test" className="h-full w-full cursor-pointer " onClick={() => handleOpenModal(index)} />
                 </div>
               </SwiperSlide>

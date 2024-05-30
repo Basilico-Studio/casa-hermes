@@ -26,7 +26,7 @@ const HeroMain = () => {
         </SwiperSlide>
         <div className="z-20 absolute top-1/3 w-full flex flex-col items-center gap-16">
           <h1 className="text-3xl font-semibold text-white px-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, labore.</h1>
-          <Button className="bg-teal-900 text-white text-xl">prenota</Button>
+          <Button className="bg-teal-900 text-white text-md">prenota</Button>
         </div>
       </Swiper>
     </div>

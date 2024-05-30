@@ -6,8 +6,8 @@ const PhotoGallery = () => {
   return (
     <div id="appartamento" className="py-10 space-y-5">
       <div className="flex flex-col gap-6 items-center justify-center py-10">
-        <h2 className="uppercase text-2xl md:text-4xl font-semibold">il ristorante</h2>
-        <p className="text-md md:text-2xl text-center">
+        <h2 className="uppercase text-2xl font-semibold">il ristorante</h2>
+        <p className="text-md md:text-xl text-center">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nostrum nulla exercitationem, obcaecati libero rerum soluta? Est corrupti deleniti necessitatibus
           doloremque voluptatibus corporis dolorum illum aperiam aliquid iste, neque placeat fugit excepturi at accusantium debitis!
         </p>

@@ -1,4 +1,5 @@
 import ContactForm from "./components/contact-form";
+import Footer from "./components/footer";
 import HeroMain from "./components/hero-main";
 import IconsSection from "./components/icons-section";
 import MapSection from "./components/map-section";
@@ -12,7 +13,7 @@ export default function Home() {
     <main>
       <NavBar />
       <HeroMain />
-      <section className="px-5 md:px-20">
+      <section className="container mx-auto">
         <PhotoGallery />
         <IconsSection />
         <PdfDonwloadSection />
@@ -20,6 +21,7 @@ export default function Home() {
         <ReviewsSection />
         <ContactForm />
       </section>
+      <Footer />
     </main>
   );
 }

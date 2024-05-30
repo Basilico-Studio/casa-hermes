@@ -29,34 +29,34 @@ const ReviewSwiper = () => {
         }}
       >
         <SwiperSlide>
-          <ReviewCard guestName="Federica, IT" rating={4} text={"ci siamo trovati bene ma il proprietario si è presentato e ci ha sputato in un occhio"} />
+          <ReviewCard guestName="Federica, IT" rating={4} text={""} />
         </SwiperSlide>
         <SwiperSlide>
           <ReviewCard
             guestName="Vera, IT"
             rating={5}
-            text={"ao semo annati io e mi cugino anacapito stavamo da pura ce stava pure er bidet, che poi alla fine basta che te siedi sulla doccia ma vabbe"}
+            text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum magni commodi nostrum, distinctio porro dolores pariatur ducimus suscipit a debitis"}
           />
         </SwiperSlide>
         <SwiperSlide>
           <ReviewCard
             guestName="Liline, BE"
             rating={5}
-            text={
-              "ci siamo trovati bene ma il proprietario si è presentato e ci ha sputato in un occhio ci siamo trovati bene ma il proprietario si è presentato e ci ha sputato in un occhio"
-            }
+            text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum magni commodi nostrum, distinctio porro dolores pariatur ducimus suscipit a debitis"}
           />
         </SwiperSlide>
         <SwiperSlide>
-          <ReviewCard guestName="Ines, PT" rating={4} text={"ci siamo trovati bene ma il proprietario si è presentato e ci ha sputato in un occhio"} />
+          <ReviewCard
+            guestName="Ines, PT"
+            rating={4}
+            text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum magni commodi nostrum, distinctio porro dolores pariatur ducimus suscipit a debitis"}
+          />
         </SwiperSlide>
         <SwiperSlide>
           <ReviewCard
             guestName="Anke, DE"
             rating={5}
-            text={
-              "ci siamo trovati bene ma il proprietario si è presentato e ci ha sputato in un occhio ci siamo trovati bene ma il proprietario si è presentato e ci ha sputato in un occhio"
-            }
+            text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum magni commodi nostrum, distinctio porro dolores pariatur ducimus suscipit a debitis"}
           />
         </SwiperSlide>
       </Swiper>

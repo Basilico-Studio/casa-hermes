@@ -10,7 +10,7 @@ export interface ReviewCardProps {
 
 const ReviewCard = ({ guestName, text, rating }: ReviewCardProps) => {
   return (
-    <div className="bg-white min-h-[250px] flex flex-col justify-between py-3 px-5 gap-4 border border-slate-700 rounded-md text-center">
+    <div className="bg-white min-h-[250px] flex flex-col justify-between py-3 px-5 gap-4 border border-slate-700 rounded-md text-center shadow-xl">
       <div className="flex justify-center gap-4">
         <div className="space-y-4">
           <div className="flex items-center justify-center gap-3">
