@@ -25,6 +25,7 @@ const PhotoSwiper = ({ photos }: PhotoSwiperProps) => {
           modules={[Navigation]}
           navigation={true}
           spaceBetween={10}
+          loop={true}
           breakpoints={{
             640: {
               slidesPerView: 1,

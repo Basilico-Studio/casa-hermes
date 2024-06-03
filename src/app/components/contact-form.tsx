@@ -21,14 +21,14 @@ const ContactForm = () => {
         <h2 className="font-semibold text-xl pb-10 uppercase">Richiedi Disponibilità</h2>
         <TextInput name="nomeCognome" label="Nome e Cognome" />
         <TextInput name="email" label="EMail" />
-        <div className="flex gap-3 w-full">
+        <div className="flex flex-col md:flex-row gap-3 w-full">
           <TextInput name="telefono" label="Telefono" />
           <div className="flex gap-3">
             <DateInput name="checkin" label="Check In" />
             <DateInput name="checkout" label="Check Out" />
           </div>
         </div>
-        <Button className="bg-teal-900 text-white w-full md:w-2/5 mt-5">Invia Richiesta</Button>
+        <Button className="bg-[#72a16b] text-white w-full md:w-2/5 mt-5">Invia Richiesta</Button>
       </Form>
     </div>
   );

@@ -29,7 +29,11 @@ const ReviewSwiper = () => {
         }}
       >
         <SwiperSlide>
-          <ReviewCard guestName="Federica, IT" rating={4} text={""} />
+          <ReviewCard
+            guestName="Federica, IT"
+            rating={5}
+            text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum magni commodi nostrum, distinctio porro dolores pariatur ducimus suscipit a debitis"}
+          />
         </SwiperSlide>
         <SwiperSlide>
           <ReviewCard

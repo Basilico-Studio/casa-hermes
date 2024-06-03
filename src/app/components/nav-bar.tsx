@@ -7,8 +7,8 @@ const NavBar = () => {
   return (
     <>
       {/* DESKTOP MENU */}
-      <div className="hidden md:flex justify-around items-center px-20 gap-10 border-b border-slate-500">
-        <img className="size-24" src="/images/umbrella-3d.png" alt="logo" />
+      <div className="hidden md:flex justify-around items-center px-20 py-3 gap-10 border-b border-slate-500">
+        <img className="size-16" src="/images/logo.png" alt="logo" />
         <a href="#appartamento">
           <p className="hover:-translate-y-1 transition-all duration-300">L'appartamento</p>
         </a>
@@ -24,7 +24,9 @@ const NavBar = () => {
         <a href="#form">
           <p className="hover:-translate-y-1 transition-all duration-300">Contatti</p>
         </a>
-        <Button className="bg-teal-900 text-white text-sm">prenota</Button>
+        <a href="#form">
+          <Button className="bg-[#72a16b] text-white text-sm">prenota</Button>
+        </a>
       </div>
       {/* MOBILE BURGER MENU */}
       <Menu className="z-50 md:hidden">

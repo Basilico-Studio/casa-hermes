@@ -13,8 +13,8 @@ export default function Home() {
     <main>
       <NavBar />
       <HeroMain />
+      <PhotoGallery />
       <section className="container mx-auto">
-        <PhotoGallery />
         <IconsSection />
         <PdfDonwloadSection />
         <MapSection />
