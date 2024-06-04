@@ -16,11 +16,11 @@ const ContactForm = () => {
   };
 
   return (
-    <div id="form" className="flex justify-center pt-20">
+    <div id="form" className="md:flex md:justify-center pt-10">
       <Form onSubmit={onSubmit} {...form} className="py-10 md:w-1/2 flex flex-col items-center gap-3">
         <h2 className="font-semibold text-xl pb-10 uppercase">Richiedi Disponibilità</h2>
         <TextInput name="nomeCognome" label="Nome e Cognome" />
-        <TextInput name="email" label="EMail" />
+        <TextInput name="email" label="E-Mail" />
         <div className="flex flex-col md:flex-row gap-3 w-full">
           <TextInput name="telefono" label="Telefono" />
           <div className="flex gap-3">
