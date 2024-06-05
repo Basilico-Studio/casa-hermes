@@ -12,7 +12,7 @@ const ContactForm = () => {
   const form = useForm<ContactFormData>({ resolver: zodResolver(formSchema) });
 
   const onSubmit = async (data: ContactFormData) => {
-    console.log(data);
+    console.log("data", data);
   };
 
   return (
