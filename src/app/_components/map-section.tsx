@@ -1,14 +1,18 @@
+import useServerTranslations from "@/lib/hooks/use-server-translations";
 import React from "react";
 
-const MapSection = () => {
+type MapSectionProps = {
+  params: any;
+};
+
+const MapSection = async ({ params }: MapSectionProps) => {
+  const { t } = await useServerTranslations(params.locale);
+
   return (
     <div id="doveSiamo" className="py-10 md:py-20 flex flex-col md:flex-row justify-between gap-10">
       <div className="flex flex-col flex-1 justify-start">
-        <h2 className="text-2xl md:text-xl font-semibold mb-10">DOVE SIAMO</h2>
-        <p className="text-lg md:text-lg leading-relaxed">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus assumenda in accusamus nesciunt provident esse iure unde sit magni, similique dignissimos
-          perspiciatis, iste dolor maxime alias culpa. Inventore nulla quis expedita nobis, quidem porro veritatis, maxime rem ea in eos!
-        </p>
+        <h2 className="text-2xl md:text-xl font-semibold mb-10">{t("whereTitle")}</h2>
+        <p className="text-lg md:text-lg leading-relaxed">{t("whereSubTitle")}</p>
       </div>
       <div className="flex-1 h-[300px]">
         <iframe

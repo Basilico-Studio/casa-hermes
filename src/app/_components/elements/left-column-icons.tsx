@@ -1,28 +1,35 @@
+import useServerTranslations from "@/lib/hooks/use-server-translations";
 import { Car, FlowerTulip, PawPrint, Siren, WifiHigh } from "@phosphor-icons/react/dist/ssr";
 import React from "react";
 
-const LeftColumnIcons = () => {
+type LeftColumnIconsProps = {
+  params: any;
+};
+
+const LeftColumnIcons = async ({ params }: LeftColumnIconsProps) => {
+  const { t } = await useServerTranslations(params.locale);
+
   return (
     <div className="flex flex-col gap-5 text-lg">
       <div className="flex items-center gap-5">
         <FlowerTulip size={28} className="md:size-7" />
-        <p>Vista sul giardino</p>
+        <p>{t("iconFlowerText")}</p>
       </div>
       <div className="flex items-center gap-5">
         <WifiHigh size={28} className="md:size-7" />
-        <p>WiFi: 4 Mbps</p>
+        <p>{t("iconWifiText")}</p>
       </div>
       <div className="flex items-center gap-5">
         <Car size={28} className="md:size-7" />
-        <p>Parcheggio gratuito nella proprietà</p>
+        <p>{t("iconParkingText")}</p>
       </div>
       <div className="flex items-center gap-5">
         <PawPrint size={28} className="md:size-7" />
-        <p>Animali domestici ammessi</p>
+        <p>{t("iconAnimalsText")}</p>
       </div>
       <div className="flex items-center gap-5">
         <Siren size={28} className="md:size-7" />
-        <p className="line-through">Rilevatore di monossido di carbonio</p>
+        <p className="line-through">{t("iconAlarmText")}</p>
       </div>
     </div>
   );
