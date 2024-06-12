@@ -1,3 +1,55 @@
 {
-  "hello": "Hallo"
+  "bookButton": "reservieren",
+
+  "nav1": "Die Wohnung",
+
+  "nav2": "Reiserouten",
+
+  "nav3": "Wo wir sind",
+
+  "nav4": "Reviews",
+
+  "nav5": "Kontakte",
+
+  "bannerTitle": "Die Oase in der Toskana, die Sie gesucht haben!",
+
+  "bannerSubTitle": "Verlieren Sie sich in der Natur, ohne auf Komfort zu verzichten!",
+
+  "galleryTitle": "DIE WOHNUNG",
+
+  "gallerySubTitle": "Casa Vacanze Hermes empfängt seine Gäste an einem der bezauberndsten Orte der Maremma. Geeignet für Familien, Paare und Gruppen von Freunden! Interner Parkplatz, große Küche, Kamin innerhalb und außerhalb der Wohnung, Swimmingpool, viel Sonne und viel Grün! Sie werden mit allem Komfort, den Sie brauchen, in die Natur katapultiert!",
+
+  "iconFlowerText": "Gartenaussicht",
+
+  "iconWifiText": "WiFi: 4 Mbps",
+
+  "iconParkingText": "Kostenloser Parkplatz auf dem Grundstück",
+
+  "iconAnimalsText": "Haustiere erlaubt",
+
+  "iconAlarmText": "Kohlenmonoxiddetektor",
+
+  "iconKitchenText": "Küche",
+
+  "iconDeskText": "Eigener Arbeitsbereich",
+
+  "iconPoolText": "Schwimmbad (gemeinsamer Service)",
+
+  "iconTvText": "TV",
+
+  "iconSirenText": "Feueralarm",
+
+  "whereTitle": "WO WIR SIND",
+
+  "whereSubTitle": "Casa Vacanze Hermes befindet sich an einem strategischen Punkt der Toskana, wodurch viele Sehenswürdigkeiten, die zu jeder Jahreszeit geeignet sind, leicht zu erreichen sind, auch in der Gegend von Viterbo. Von Kunststädten bis hin zu Wellnesszentren gibt es viele Möglichkeiten, die niedrigen Temperaturen im Winter und die milden Temperaturen im Sommer zu vergessen. Casa Vacanze Hermes lässt Sie einen Traum erleben, aus dem Sie kaum mehr aufwachen können und der einen unauslöschlichen Eindruck in Ihren Gedanken und Herzen hinterlässt.",
+
+  "formTitle": "Verfügbarkeit checken",
+
+  "nameInputLabel": "Name und Nachname",
+
+  "phoneInputLabel": "Telefon",
+
+  "formButtonText": "Anfrage absenden",
+
+  "calendarText": "Datum auswählen"
 }

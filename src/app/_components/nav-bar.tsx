@@ -28,7 +28,7 @@ const NavBar = () => {
           <p className="hover:-translate-y-1 transition-all duration-300">{t("nav5")}</p>
         </a>
         <a href="#form">
-          <Button className="bg-[#72a16b] text-white text-sm">prenota</Button>
+          <Button className="bg-[#72a16b] text-white text-sm">{t("bookButton")}</Button>
         </a>
       </div>
       {/* MOBILE BURGER MENU */}

@@ -1,4 +1,6 @@
 {
+  "bookButton": "book",
+
   "nav1": "The apartment",
 
   "nav2": "Itineraries",
@@ -29,7 +31,7 @@
 
   "iconKitchenText": "Kitchen",
 
-  "iconDeskText": "Spazio di lavoro dedicato",
+  "iconDeskText": "Dedicated work space",
 
   "iconPoolText": "Pool (shared service)",
 

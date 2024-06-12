@@ -39,10 +39,10 @@ const LanguageSwitcher = ({ locale }: LanguageSwitcherProps) => {
   };
 
   return (
-    <div className="absolute top-5 right-6 z-30">
+    <div className="absolute top-6 right-6 z-30">
       <DropdownMenu.Root>
         <DropdownMenu.Trigger asChild>
-          <button className="bg-white rounded w-10 h-10 flex items-center justify-center outline-none ring-0">
+          <button className="rounded w-10 h-10 flex items-center justify-center outline-none ring-0">
             <Image src={`/images/flags/${locale}.svg`} alt={locale} width={50} height={50} />
           </button>
         </DropdownMenu.Trigger>
@@ -50,7 +50,7 @@ const LanguageSwitcher = ({ locale }: LanguageSwitcherProps) => {
         <DropdownMenu.Portal>
           <DropdownMenu.Content className="flex flex-col z-30" sideOffset={5}>
             {langs.map((l) => (
-              <div key={l} className="h-10 w-10 flex justify-center items-center rounded bg-white opacity-70 hover:opacity-100 transition-all duration-300">
+              <div key={l} className="h-10 w-10 flex justify-center items-center rounded transition-all duration-300">
                 <DropdownMenu.Item asChild className="!ring-0 !outline-none">
                   <button onClick={() => handleLocaleChange(l)}>
                     <Image src={`/images/flags/${l}.svg`} alt={l} width={50} height={50} />

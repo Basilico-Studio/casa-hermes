@@ -29,7 +29,7 @@ const HeroMain = () => {
             <h3 className="text-xl font-semibold text-white px-10">{t("bannerSubTitle")}</h3>
           </div>
           <a href="#form">
-            <Button className="bg-[#72a16b] text-white text-md">prenota</Button>
+            <Button className="bg-[#72a16b] text-white text-md">{t("bookButton")}</Button>
           </a>
         </div>
       </Swiper>
