@@ -1,27 +1,20 @@
-import ContactForm from "../_components/contact-form";
-import Footer from "../_components/footer";
-import HeroMain from "../_components/hero-main";
-import IconsSection from "../_components/icons-section";
-import MapSection from "../_components/map-section";
-import NavBar from "../_components/nav-bar";
-import PdfDonwloadSection from "../_components/pdf-download-section";
-import PhotoGallery from "../_components/photo-gallery";
-import ReviewsSection from "../_components/reviews-section";
+import HeroMain from "@/components/extensive/hero-main";
+import IconsSection from "@/components/extensive/icons-section";
+import MapSection from "@/components/extensive/map-section";
+import PhotoGallery from "@/components/extensive/photo-gallery";
+import ReviewsSection from "@/components/extensive/reviews-section";
+import { Section } from "@/components/common/section";
 
 export default async function Home({ params }: any) {
   return (
     <main>
-      <NavBar />
       <HeroMain />
+      <IconsSection params={params} />
       <PhotoGallery params={params} />
-      <section className="container mx-auto">
-        <IconsSection params={params} />
-        <PdfDonwloadSection />
-        <MapSection params={params} />
-        <ReviewsSection />
-        <ContactForm />
-      </section>
-      <Footer />
+      <ReviewsSection />
+      <MapSection params={params} />
+      {/* Empty Section to allow some bottom space */}
+      <Section className="lg:py-36 py-28" />
     </main>
   );
 }

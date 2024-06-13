@@ -43,16 +43,28 @@ const PhotoSwiper = ({ photos }: PhotoSwiperProps) => {
         >
           {photos.map((picture, index) => {
             return (
-              <SwiperSlide className="py-2">
+              <SwiperSlide className="py-2" key={index}>
                 <div className="rounded overflow-hidden bg-gray-400 w-full h-[300px] hover:-translate-y-1 transition-all duration-300">
-                  <img key={index} src={picture} alt="test" className="h-full w-full cursor-pointer " onClick={() => handleOpenModal(index)} />
+                  <img
+                    key={index}
+                    src={picture}
+                    alt="test"
+                    className="h-full w-full cursor-pointer "
+                    onClick={() => handleOpenModal(index)}
+                  />
                 </div>
               </SwiperSlide>
             );
           })}
         </Swiper>
       </div>
-      {showPhotoModal && <PhotoModal onClose={() => setShowPhotoModal(false)} photos={photos} index={slideNumber} />}
+      {showPhotoModal && (
+        <PhotoModal
+          onClose={() => setShowPhotoModal(false)}
+          photos={photos}
+          index={slideNumber}
+        />
+      )}
     </div>
   );
 };

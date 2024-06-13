@@ -4,7 +4,10 @@ import { InputWrapper } from "./input-wrapper";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
-export type InputProps<T extends FieldValues> = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & {
+export type InputProps<T extends FieldValues> = React.DetailedHTMLProps<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement
+> & {
   label?: string;
   name: keyof T;
   infoLabel?: string;
@@ -14,14 +17,27 @@ export type InputProps<T extends FieldValues> = React.DetailedHTMLProps<React.In
   wrapperClassName?: string;
 };
 
-export const TextInput = <T extends FieldValues>({ label, name, infoLabel, validation, className, wrapperClassName, ...rest }: InputProps<T>) => {
+export const TextInput = <T extends FieldValues>({
+  label,
+  name,
+  infoLabel,
+  validation,
+  className,
+  wrapperClassName,
+  ...rest
+}: InputProps<T>) => {
   const {
     register,
     formState: { errors },
   } = useFormContext();
 
   return (
-    <InputWrapper name={name} label={label} errors={errors} className={wrapperClassName}>
+    <InputWrapper
+      name={name}
+      label={label}
+      errors={errors}
+      className={wrapperClassName}
+    >
       <Input
         {...register(name, {
           ...validation,
@@ -30,7 +46,7 @@ export const TextInput = <T extends FieldValues>({ label, name, infoLabel, valid
         })}
         step={rest.type === "time" ? "60" : ".01"}
         {...rest}
-        className={cn("bg-background", className)}
+        className={cn("bg-primary-foreground", className)}
       />
     </InputWrapper>
   );

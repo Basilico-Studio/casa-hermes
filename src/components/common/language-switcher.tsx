@@ -29,31 +29,55 @@ const LanguageSwitcher = ({ locale }: LanguageSwitcherProps) => {
     document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
 
     // redirect to the new locale path
-    if (currentLocale === i18nConfig.defaultLocale && !i18nConfig.prefixDefault) {
+    if (
+      currentLocale === i18nConfig.defaultLocale &&
+      !i18nConfig.prefixDefault
+    ) {
       router.push("/" + newLocale + currentPathname);
     } else {
-      router.push(currentPathname.replace(`/${currentLocale}`, `/${newLocale}`));
+      router.push(
+        currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
+      );
     }
 
     router.refresh();
   };
 
   return (
-    <div className="absolute top-6 right-6 z-30">
+    <div>
       <DropdownMenu.Root>
         <DropdownMenu.Trigger asChild>
-          <button className="rounded w-10 h-10 flex items-center justify-center outline-none ring-0">
-            <Image src={`/images/flags/${locale}.svg`} alt={locale} width={50} height={50} />
+          <button className="rounded size-6 flex items-center justify-center outline-none ring-0">
+            <Image
+              src={`/images/flags/${locale}.svg`}
+              alt={locale}
+              width={50}
+              height={50}
+            />
           </button>
         </DropdownMenu.Trigger>
 
         <DropdownMenu.Portal>
-          <DropdownMenu.Content className="flex flex-col z-30" sideOffset={5}>
+          <DropdownMenu.Content
+            className="flex flex-col z-50 bg-primary-foreground rounded"
+            sideOffset={5}
+          >
             {langs.map((l) => (
-              <div key={l} className="h-10 w-10 flex justify-center items-center rounded transition-all duration-300">
+              <div
+                key={l}
+                className="size-8 flex justify-center items-center rounded transition-all duration-300"
+              >
                 <DropdownMenu.Item asChild className="!ring-0 !outline-none">
-                  <button onClick={() => handleLocaleChange(l)}>
-                    <Image src={`/images/flags/${l}.svg`} alt={l} width={50} height={50} />
+                  <button
+                    className="size-6"
+                    onClick={() => handleLocaleChange(l)}
+                  >
+                    <Image
+                      src={`/images/flags/${l}.svg`}
+                      alt={l}
+                      width={50}
+                      height={50}
+                    />
                   </button>
                 </DropdownMenu.Item>
               </div>
