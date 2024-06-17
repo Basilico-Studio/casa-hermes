@@ -8,11 +8,8 @@ export function BrochureButton() {
 
   return (
     <Button asChild>
-      <Link
-        href={`${window.location.origin}/brouchures/${i18n.language}.pdf`}
-        target="_blank"
-      >
-        {t("broshuretextbutton")}
+      <Link href={`${window.location.origin}/brochures/${i18n.language}.pdf`} target="_blank">
+        brochures
       </Link>
     </Button>
   );
