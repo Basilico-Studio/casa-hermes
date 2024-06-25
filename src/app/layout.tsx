@@ -3,7 +3,7 @@ import { primaryFont } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Casa Hermess",
+  title: "Casa Hermes",
   description: "",
 };
 

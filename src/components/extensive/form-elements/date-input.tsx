@@ -2,11 +2,7 @@ import React from "react";
 import { Calendar as CalendarIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 import { Controller, useFormContext } from "react-hook-form";
 import { InputWrapper } from "./input-wrapper";
@@ -19,10 +15,7 @@ type DateInputProps<T> = {
   name: keyof T;
 };
 
-export const DateInput = <T extends Record<string, unknown>>({
-  name,
-  label,
-}: DateInputProps<T>) => {
+export const DateInput = <T extends Record<string, unknown>>({ name, label }: DateInputProps<T>) => {
   const [open, setOpen] = React.useState<boolean>(false);
   const { t } = useClientTranslations();
   const {
@@ -39,13 +32,7 @@ export const DateInput = <T extends Record<string, unknown>>({
           return (
             <Popover open={open} onOpenChange={setOpen}>
               <PopoverTrigger asChild>
-                <Button
-                  variant={"outline"}
-                  className={cn(
-                    "justify-start text-left font-normal bg-primary-foreground",
-                    !value && "text-muted-foreground"
-                  )}
-                >
+                <Button variant={"outline"} className={cn("justify-start text-left font-normal bg-primary-foreground", !value && "text-muted-foreground")}>
                   <CalendarIcon className="mr-2 h-4 w-4" />
                   {value ? formatDate(value) : <span>{t("calendarText")}</span>}
                 </Button>
@@ -54,8 +41,8 @@ export const DateInput = <T extends Record<string, unknown>>({
                 <Calendar
                   mode="single"
                   selected={new Date(value)}
-                  onDayClick={(date: any) => {
-                    onChange(date?.getTime());
+                  onDayClick={(date) => {
+                    onChange(date);
                     setOpen(false);
                   }}
                   initialFocus

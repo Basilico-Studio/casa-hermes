@@ -1,12 +1,11 @@
 import { z } from "zod";
 
 export const formSchema = z.object({
-  firstAndLastName: z.string(),
-  peopleNumber: z.number().min(1, "Required"),
+  nomeCognome: z.string(),
   email: z.string().email(),
-  phone: z.string(),
-  checkInDate: z.string(),
-  checkOutDate: z.string(),
+  telefono: z.string(),
+  checkin: z.date(),
+  checkout: z.date(),
 });
 
 export type ContactFormData = z.infer<typeof formSchema>;
