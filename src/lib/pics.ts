@@ -14,6 +14,22 @@ export const imagesUrls = [
   "/images/pic-8.jpg",
 
   "/images/pic-9.jpg",
+];
 
-  "/images/pic-10.jpg",
+export const imagesUrls2 = [
+  "/images/DSCF9186.jpg",
+
+  "/images/DSCF9194.jpg",
+
+  "/images/DSCF9219.jpg",
+
+  "/images/DSCF9259.jpg",
+
+  "/images/DSCF9273.jpg",
+
+  "/images/DSCF9293.jpg",
+
+  "/images/DSCF9360.jpg",
+
+  "/images/DSCF9363.jpg",
 ];
