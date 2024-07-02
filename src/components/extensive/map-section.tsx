@@ -28,9 +28,9 @@ const MapSection = async ({ params }: MapSectionProps) => {
         </div>
         <div className="h-[300px]">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.9927982070412!2d12.384010076852515!3d41.89301197124015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f5f76b4f009dd%3A0xe829599ac076cb74!2sVia.cornelia%20377!5e0!3m2!1sen!2sit!4v1713362150311!5m2!1sen!2sit"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d541.7995854833853!2d11.685540875784246!3d42.69992213287287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13291867a608ea0b%3A0x503f6d27e4744f9d!2sCasa%20Vacanze%20Hermes!5e0!3m2!1sen!2sit!4v1719932525400!5m2!1sen!2sit"
             loading="lazy"
-            className="h-full w-full rounded-md"
+            className="h-full w-full rounded-md border-none"
           ></iframe>
         </div>
       </Container>
