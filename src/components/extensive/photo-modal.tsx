@@ -10,8 +10,6 @@ interface PhotoModalProps {
 const PhotoModal = ({ onClose, photos, index }: PhotoModalProps) => {
   const [currentIndex, setCurrentIndex] = useState(index);
 
-  console.log(index, currentIndex);
-
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? photos.length - 1 : currentIndex - 1;

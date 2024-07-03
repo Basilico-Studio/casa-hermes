@@ -1,55 +1,30 @@
 {
   "bookButton": "prenota",
-
   "nav1": "L'appartamento",
-
   "nav2": "Itinerari",
-
   "nav3": "Dove siamo",
-
   "nav4": "Dicono di noi",
-
   "nav5": "Contatti",
-
   "bannerTitle": "L’Oasi in Toscana che cercavi!",
-
   "bannerSubTitle": "Perditi nella natura senza rinunciare al comfort!",
-
   "galleryTitle": "L’ APPARTAMENTO",
-
   "gallerySubTitle": "La Casa Vacanze Hermes accoglie i suoi ospiti in uno dei posti più incantevoli della Maremma. Adatta per famiglie, coppie e gruppi di amici! Parcheggio interno, ampia cucina, camino interno ed esterno all’appartamento, piscina, tanto sole e tanto verde! Sarete catapultati nella natura con tutti i comfort di cui avrete bisogno!",
-
   "iconFlowerText": "Vista sul giardino",
-
   "iconWifiText": "WiFi: 4 Mbps",
-
   "iconParkingText": "Parcheggio gratuito nella proprietà",
-
   "iconAnimalsText": "Animali domestici ammessi",
-
   "iconAlarmText": "Rilevatore di monossido di carbonio",
-
   "iconKitchenText": "Cucina",
-
   "iconDeskText": "Spazio di lavoro dedicato",
-
   "iconPoolText": "Piscina (servizio condiviso)",
-
   "iconTvText": "TV",
-
   "iconSirenText": "Allarme antincendio",
-
   "whereTitle": "DOVE SIAMO",
-
   "whereSubTitle": "Casa Vacanze Hermes si trova in un punto strategico della Toscana, che rende facilmente raggiungibili tante mete da visitare e adatte ad ogni stagione, anche nel Viterbese. Dalle città d’arte ai centri termali, sono tante le occasioni per dimenticarsi delle basse temperature dell’inverno e le miti temperature dell’estate. Casa Vacanze Hermes vi farà vivere un sogno dal quale difficilmente riuscirete a destarvi, lasciando un segno indelebile nelle vostre menti e nei vostri cuori.",
-
   "formTitle": "Richiedi Disponibilità",
-
   "nameInputLabel": "Nome e Cognome",
-
   "phoneInputLabel": "Telefono",
-
+  "messageInputLabel": "Messaggio",
   "formButtonText": "Invia Richiesta",
-
   "calendarText": "Scegli data"
 }

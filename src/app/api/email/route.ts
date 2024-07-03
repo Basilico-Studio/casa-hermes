@@ -1,28 +1,54 @@
-import { ContactFormData } from "@/lib/zod";
-import sgMail from "@sendgrid/mail";
+import { mailjet } from "@/lib/mailjet";
+import { ContactFormSchema } from "@/lib/zod";
+import { format } from "date-fns";
 
 export async function POST(request: Request) {
-  const body = (await request.json()) as ContactFormData;
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+  const body = await request.json();
 
-  const msg = {
-    to: body.email,
-    from: "info@casahermes.it",
-    subject: "Richiesta di contatto - Sito Web",
-    html: `
-    <p>Email: <b>${body.email}</b></p>
-    <p>Nome: <b>${body.nomeCognome}</b></p>
-    <p>Telefono: <b>${body.telefono}</b></p>
-    <p>Data Checkin: <b>${body.checkin}</b></p>
-    <p>Data Checkout: <b>${body.checkout}</b></p>
-    `,
-  };
+  const result = ContactFormSchema.safeParse({
+    ...body,
+    checkin: new Date(body.checkin ?? Date.now()),
+    checkout: new Date(body.checkout ?? Date.now()),
+  });
+
+  if (!result.success) {
+    return Response.json({
+      success: false,
+      errors: result.error.flatten(),
+    });
+  }
+
+  const { nomeCognome, email, telefono, checkin, checkout, messaggio } =
+    result.data;
 
   try {
-    const res = await sgMail.send(msg);
-    console.log(`Email sent`, res);
-  } catch (error) {
-    console.error(error);
+    await mailjet.post("send", { version: "v3.1" }).request({
+      Messages: [
+        {
+          From: {
+            Email: "website@casahermes.it",
+            Name: "Sito Web - Casa Hermes",
+          },
+          To: [{ Email: "ciaffardini.g@gmail.com" }],
+          Subject: "Richiesta di contatto - Sito Casa Hermes",
+          HTMLPart: `
+            <h2>Nuova richiesta di contatto</h2>
+            <br />
+            <p><strong>Nome e Cognome:</strong> ${nomeCognome}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Telefono:</strong> ${telefono}</p>
+            <br />
+            <p><strong>Check-in:</strong> ${format(checkin, "dd/MM/yyyy")}</p>
+            <p><strong>Check-out:</strong> ${format(checkout, "dd/MM/yyyy")}</p>
+            <br />
+            <p><strong>Messaggio:</strong></p>
+            <p>${messaggio}</p>
+          `,
+        },
+      ],
+    });
+    return Response.json({ success: true, errors: [] });
+  } catch (err: any) {
+    return Response.json({ success: false, errors: err?.message });
   }
-  return Response.json(body);
 }

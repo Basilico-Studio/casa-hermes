@@ -1,6 +1,7 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { primaryFont } from "@/lib/fonts";
-import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Casa Hermes",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="en">
-      <body className={primaryFont.className}>{children}</body>
+      <body className={primaryFont.className}>
+        {children}
+        <Toaster />
+      </body>
     </html>
   );
 }

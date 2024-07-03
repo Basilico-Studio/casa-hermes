@@ -1,9 +1,6 @@
 "use client";
-
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { usePathname, useRouter } from "next/navigation";
 import i18nConfig from "@/i18n-config";
-import useClientTranslations from "@/lib/hooks/use-client-translations";
 import Image from "next/image";
 
 interface LanguageSwitcherProps {
@@ -11,37 +8,7 @@ interface LanguageSwitcherProps {
 }
 
 const LanguageSwitcher = ({ locale }: LanguageSwitcherProps) => {
-  const { i18n } = useClientTranslations();
-
   const langs = i18nConfig.locales.filter((l) => locale !== l);
-
-  const currentLocale = i18n.language;
-
-  const router = useRouter();
-  const currentPathname = usePathname();
-
-  const handleLocaleChange = (newLocale: string) => {
-    // set cookie for next-i18n-router
-    const days = 30;
-    const date = new Date();
-    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-    const expires = "; expires=" + date.toUTCString();
-    document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
-
-    // redirect to the new locale path
-    if (
-      currentLocale === i18nConfig.defaultLocale &&
-      !i18nConfig.prefixDefault
-    ) {
-      router.push("/" + newLocale + currentPathname);
-    } else {
-      router.push(
-        currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
-      );
-    }
-
-    router.refresh();
-  };
 
   return (
     <div>
@@ -70,7 +37,7 @@ const LanguageSwitcher = ({ locale }: LanguageSwitcherProps) => {
                 <DropdownMenu.Item asChild className="!ring-0 !outline-none">
                   <button
                     className="size-6"
-                    onClick={() => handleLocaleChange(l)}
+                    onClick={() => window.location.replace("/" + l)}
                   >
                     <Image
                       src={`/images/flags/${l}.svg`}
