@@ -29,7 +29,7 @@ export async function POST(request: Request) {
             Email: "website@casahermes.it",
             Name: "Sito Web - Casa Hermes",
           },
-          To: [{ Email: "ciaffardini.g@gmail.com" }],
+          To: [{ Email: "info@casavacanzehermes.it" }],
           Subject: "Richiesta di contatto - Sito Casa Hermes",
           HTMLPart: `
             <h2>Nuova richiesta di contatto</h2>
