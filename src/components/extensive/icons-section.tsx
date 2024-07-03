@@ -12,6 +12,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 
 import useServerTranslations from "@/lib/hooks/use-server-translations";
+import { Section } from "../common/section";
 
 type IconsSectionProps = {
   params: any;
@@ -20,9 +21,9 @@ type IconsSectionProps = {
 const IconsSection = async ({ params }: IconsSectionProps) => {
   const { t } = await useServerTranslations(params.locale);
   return (
-    <div className="py-5 bg-primary">
+    <Section className="bg-white">
       <Container className="space-y-10">
-        <div className="flex gap-2 flex-wrap">
+        <div className="flex flex-wrap lg:justify-center">
           <IconTextRow icon={FlowerTulip} text={t("iconFlowerText")} />
           <IconTextRow icon={WifiHigh} text={t("iconWifiText")} />
           <IconTextRow icon={Car} text={t("iconParkingText")} />
@@ -34,7 +35,7 @@ const IconsSection = async ({ params }: IconsSectionProps) => {
           <IconTextRow icon={Siren} text={t("iconSirenText")} />
         </div>
       </Container>
-    </div>
+    </Section>
   );
 };
 

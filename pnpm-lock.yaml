@@ -37,6 +37,9 @@ dependencies:
   date-fns:
     specifier: ^3.6.0
     version: 3.6.0
+  embla-carousel-react:
+    specifier: ^8.1.6
+    version: 8.1.6(react@18.3.1)
   i18next:
     specifier: ^23.11.5
     version: 23.11.5
@@ -70,9 +73,6 @@ dependencies:
   react-i18next:
     specifier: ^14.1.2
     version: 14.1.2(i18next@23.11.5)(react-dom@18.3.1)(react@18.3.1)
-  swiper:
-    specifier: ^11.1.1
-    version: 11.1.4
   tailwind-merge:
     specifier: ^2.3.0
     version: 2.3.0
@@ -1462,6 +1462,28 @@ packages:
   /eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
+  /embla-carousel-react@8.1.6(react@18.3.1):
+    resolution: {integrity: sha512-DHxwFzF63yVrU95Eo58E9Xr5b6Y9ul6TTsqb/rtwMi+jXudAmIqN1i9iBxQ73i8jKuUVxll/ziNYMmnWvrdQJQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.1 || ^18.0.0
+    dependencies:
+      embla-carousel: 8.1.6
+      embla-carousel-reactive-utils: 8.1.6(embla-carousel@8.1.6)
+      react: 18.3.1
+    dev: false
+
+  /embla-carousel-reactive-utils@8.1.6(embla-carousel@8.1.6):
+    resolution: {integrity: sha512-Wg+J2YoqLqkaqsXi7fTJaLmXm6BpgDRJ0EfTdvQ4KE/ip5OsUuKGpJsEQDTt4waGXSDyZhIBlfoQtgGJeyYQ1Q==}
+    peerDependencies:
+      embla-carousel: 8.1.6
+    dependencies:
+      embla-carousel: 8.1.6
+    dev: false
+
+  /embla-carousel@8.1.6:
+    resolution: {integrity: sha512-9n7FVsbPAs1KD+JmO84DnEDOZMXPBQbLujjMQqvsBRN2CDWwgZ9hRSNapztdPnyJfzOIxowGmj0BUQ8ACYAPkA==}
+    dev: false
+
   /emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
 
@@ -2127,11 +2149,6 @@ packages:
   /supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
-
-  /swiper@11.1.4:
-    resolution: {integrity: sha512-1n7kbYJB2dFEpUHRFszq7gys/ofIBrMNibwTiMvPHwneKND/t9kImnHt6CfGPScMHgI+dWMbGTycCKGMoOO1KA==}
-    engines: {node: '>= 4.7.0'}
-    dev: false
 
   /tailwind-merge@2.3.0:
     resolution: {integrity: sha512-vkYrLpIP+lgR0tQCG6AP7zZXCTLc1Lnv/CCRT3BqJ9CZ3ui2++GPaGb1x/ILsINIMSYqqvrpqjUFsMNLlW99EA==}

@@ -1,14 +1,12 @@
 import React from "react";
-import PhotoSwiper from "./photo-swiper";
-import { imagesUrls } from "../../lib/pics";
+import { imagesUrls, imagesUrls2 } from "../../lib/pics";
 import useServerTranslations from "@/lib/hooks/use-server-translations";
 import { Container } from "@/components/common/container";
 import { cn } from "@/lib/utils";
 import { secondaryFont } from "@/lib/fonts";
 import { Section } from "../common/section";
-import { Button } from "../ui/button";
-import Link from "next/link";
 import { BrochureButton } from "./brochure-button";
+import { ImageCarousel } from "./image-carousel";
 
 type PhotoGalleryProps = {
   params: any;
@@ -18,8 +16,8 @@ const PhotoGallery = async ({ params }: PhotoGalleryProps) => {
   const { t } = await useServerTranslations(params.locale);
 
   return (
-    <Section id="appartamento" className=" bg-primary-foreground">
-      <Container className="space-y-10">
+    <Section id="appartamento" className=" bg-primary-foreground space-y-10">
+      <Container>
         <div className="space-y-3">
           <div className="flex justify-between items-center">
             <h2
@@ -34,7 +32,16 @@ const PhotoGallery = async ({ params }: PhotoGalleryProps) => {
           </div>
           <p className="font-light">{t("gallerySubTitle")}</p>
         </div>
-        <PhotoSwiper photos={imagesUrls as string[]} />
+      </Container>
+      <Container className="space-y-4">
+        <ImageCarousel
+          images={imagesUrls2}
+          itemClassNames="lg:basis-1/3 md:basis-1/2"
+        />
+        <ImageCarousel
+          images={imagesUrls}
+          itemClassNames="lg:basis-1/3 md:basis-1/2"
+        />
       </Container>
     </Section>
   );

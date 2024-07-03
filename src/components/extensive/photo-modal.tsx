@@ -1,5 +1,12 @@
-import { CaretLeft, CaretRight, X } from "@phosphor-icons/react";
-import React, { useState } from "react";
+import { X } from "lucide-react";
+import { Button } from "../ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
 
 interface PhotoModalProps {
   onClose: () => void;
@@ -7,59 +14,41 @@ interface PhotoModalProps {
   index: number;
 }
 
-const PhotoModal = ({ onClose, photos, index }: PhotoModalProps) => {
-  const [currentIndex, setCurrentIndex] = useState(index);
-
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? photos.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === photos.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-
+const PhotoModal = ({ photos, onClose, index }: PhotoModalProps) => {
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-70 hidden md:flex justify-center items-center z-50">
-      <div className="w-4/5 h-[50%] flex flex-col">
-        <div className="overflow-hidden aspect-square h-full flex flex-col rounded">
-          <button
-            className="absolute top-[50%] left-1 md:left-64"
-            onClick={prevSlide}
-          >
-            <CaretLeft
-              className="text-black rounded-full p-1 bg-primary-foreground"
-              size={32}
-            />
-          </button>
-          <button
-            className="absolute top-[50%] right-1 md:right-64"
-            onClick={nextSlide}
-          >
-            <CaretRight
-              className="text-black rounded-full p-1 bg-primary-foreground"
-              size={32}
-            />
-          </button>
-          <button
-            className="text-primary text-lg absolute top-[35%] md:top-[25%] right-1 md:right-64 "
-            onClick={() => onClose()}
-          >
-            <X
-              className="text-primary-foreground rounded-full p-1 bg-red-400"
-              size={32}
-            />
-          </button>
-          <div
-            className="h-[600px] bg-contain bg-no-repeat bg-center"
-            style={{ backgroundImage: `url(${photos[currentIndex]})` }}
-          />
-        </div>
-      </div>
-    </div>
+    <section className="fixed top-0 left-0 flex justify-center items-center h-screen w-screen z-40 p-10">
+      <div className="fixed top-0 left-0 inset-0 bg-black bg-opacity-70 z-40 h-screen" />
+      <Carousel
+        className="relative z-50"
+        opts={{
+          startIndex: index,
+          slidesToScroll: 1,
+        }}
+      >
+        <CarouselContent>
+          {photos.map((img) => (
+            <CarouselItem key={img} className="flex justify-center">
+              <img
+                key={img}
+                src={img}
+                alt="Image"
+                className="lg:h-[90vh] h-auto w-auto rounded-md"
+              />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <Button
+          size={"icon"}
+          variant={"outline"}
+          onClick={onClose}
+          className="absolute lg:top-12 top-2 lg:right-12 right-2 rounded-full size-8"
+        >
+          <X className="size-4" />
+        </Button>
+        <CarouselPrevious className="lg:left-12 left-2" />
+        <CarouselNext className="lg:right-12 right-2" />
+      </Carousel>
+    </section>
   );
 };
 

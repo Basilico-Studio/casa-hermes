@@ -1,8 +1,4 @@
 "use client";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import useClientTranslations from "@/lib/hooks/use-client-translations";
 import { cn } from "@/lib/utils";
 import { secondaryFont } from "@/lib/fonts";

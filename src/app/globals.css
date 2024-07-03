@@ -121,10 +121,3 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-burger-bars {
   @apply md:hidden;
 }
-
-/* SWIPER STYLES */
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: white !important;
-}
