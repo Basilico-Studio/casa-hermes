@@ -10,7 +10,7 @@ const HeroMain = () => {
   const { t } = useClientTranslations();
 
   return (
-    <section className="relative h-screen w-full bg-center bg-cover bg-no-repeat bg-[url('/images/pic-3.jpg')]">
+    <section className="relative h-screen w-full bg-center bg-cover bg-no-repeat bg-[url('/images/banner.jpg')]">
       <div className="absolute top-0 left-0 w-full h-full bg-black/40 flex justify-start items-center">
         <Container>
           <div className="space-y-10">
