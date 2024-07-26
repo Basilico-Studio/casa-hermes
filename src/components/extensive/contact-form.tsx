@@ -46,7 +46,7 @@ const ContactForm = () => {
 
   return (
     <div
-      id="contatti"
+      id="form"
       className="bg-primary-foreground max-w-xl rounded lg:-translate-y-44 -translate-y-28 p-6 space-y-6 w-full"
     >
       <h2
